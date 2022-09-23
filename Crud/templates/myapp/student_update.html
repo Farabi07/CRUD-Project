@@ -1,0 +1,14 @@
+{% extends 'myapp/base.html' %}
+
+{% block body %}
+<div class="text-center">
+           <h1 style=" color:blue" >Student Update </h1>
+        <form method="POST">
+            {{student_update.as_p}}
+            {% csrf_token %}
+            <input type="submit" name="submit" value="Update" class="btn btn-primary">
+
+        </form>
+</div>
+
+{% endblock %}
